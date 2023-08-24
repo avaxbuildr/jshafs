@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS by_filesize ON shafs(filesize);

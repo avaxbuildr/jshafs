@@ -1,0 +1,21 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.42.0.0'
+}
+
+application {
+    mainClass = 'bi.crypto.jshafs.jshafs'
+}
+
+task countfiles(type: JavaExec) {
+    mainClass = "bi.crypto.jshafs.countfiles"
+    classpath = sourceSets.main.runtimeClasspath
+}
